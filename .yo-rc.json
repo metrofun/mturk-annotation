@@ -1,0 +1,7 @@
+{
+  "generator-react-webpack": {
+    "appName": "mturkAnnotation",
+    "style": "css",
+    "postcss": true
+  }
+}
