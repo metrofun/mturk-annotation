@@ -1,21 +1,127 @@
 /* Base Application Styles */
 body {
-  color: #fff;
-  background: #222;
+    font-family: verdana, arial, sans-serif;
+    background: #f9f9f9;
+    font-size: 13px;
+    color: #484848;
+    text-rendering: optimizelegibility;
 }
 
-.index img {
-  margin: 40px auto;
-  border-radius: 4px;
-  background: #fff;
-  display: block;
+.app {
+    padding: 10px;
+}
+.app > .editor {
+    float:left;
+    width: 60%;
+    padding-right: 20px;
 }
 
-.index .notice {
-  margin: 20px auto;
-  padding: 15px 0;
-  text-align: center;
-  border: 1px solid #000;
-  border-width: 1px 0;
-  background: #666;
+.app__sidebar {
+    overflow: hidden;
+}
+
+.title {
+    letter-spacing: -0.3px;
+    padding: 0;
+    margin: 0 0 10px;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 30px;
+    min-height: 60px;
+    /* text-transform: uppercase; */
+}
+
+.title__emphasize {
+    /* font-weight: bold; */
+    text-transform: none;
+    /* font-size: 20px; */
+}
+
+.app__controls{
+    padding-top: 20px;
+}
+
+.button {
+    border: none;
+    background: -webkit-linear-gradient(#9a9a9a, #646464);
+    background: linear-gradient(#9a9a9a, #646464);
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 18px;
+    font-weight: 400;
+    display: inline-block;
+    color: #fafafa;
+    text-decoration: none;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+    text-decoration: none;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+.button_style_info {
+    background: #5BBFE8;
+    margin-right: 20px;
+}
+
+.button_style_danger {
+    background: #cc7a6f;
+    color: #fafafa;
+}
+
+.button_style_danger:active {
+    background: #c5695c;
+}
+
+.alert {
+    padding: 10px 20px;
+    background: rgba(204,122,111,0.1) url('../images/caution.svg') no-repeat 15px center;
+    padding-left: 85px;
+    background-size: 50px auto;
+    font-size: 20px;
+    font-family: Arial;
+    border-left: 5px solid rgba(191,87,73,0.2);
+}
+
+.alert ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.editor {
+    cursor: crosshair;
+    position: relative;
+}
+
+.editor__img {
+    width: 100%;
+    display: block;
+}
+
+.editor__point {
+    background: url('../images/plus2.svg') no-repeat center;
+    background-size: 100%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 1.5vw;
+    height: 1.5vw;
+    position: absolute;
+    /* filter: invert(100%); */
+}
+
+.example {
+    background: #f8f5ec;
+}
+
+.example__title {
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #222;
+    background-color: #f1ede4;
+}
+
+.example > .editor {
+    padding: 10px;
 }
