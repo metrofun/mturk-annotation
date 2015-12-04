@@ -1,4 +1,4 @@
-const steps = [
+let steps = [
   {
     label: 'middle of forehead',
     id: 2

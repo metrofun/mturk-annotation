@@ -12,8 +12,8 @@ body {
 }
 .app > .editor {
     float:left;
-    width: 60%;
-    padding-right: 20px;
+    margin-right: 20px;
+    max-width: 60%;
 }
 
 .app__sidebar {
@@ -57,10 +57,11 @@ body {
     text-decoration: none;
     outline: none;
     margin-bottom: 20px;
+    cursor: pointer;
 }
 
 .button_style_info {
-    background: #5BBFE8;
+    background: #6FCC9F;
     margin-right: 20px;
 }
 
@@ -95,8 +96,13 @@ body {
 }
 
 .editor__img {
-    width: 100%;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100vh;
     display: block;
+    /* padding-bottom: 20px; */
+    box-sizing: border-box;
 }
 
 .editor__point {
@@ -107,14 +113,51 @@ body {
     width: 1.5vw;
     height: 1.5vw;
     position: absolute;
-    /* filter: invert(100%); */
 }
 
 .example {
+    position: relative;
+}
+
+.example__img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100vh;
+    display: block;
+    /* padding-bottom: 20px; */
+    box-sizing: border-box;
+}
+
+.example__point {
+    animation: pulse2 1s linear infinite;
+    border-radius: 50%;
+    background: red;
+    background-size: 100%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 1vw;
+    height: 1vw;
+    position: absolute;
+}
+
+@keyframes "pulse2" {
+    0% {
+        transform: translate(-50%, -50%) scale(1.5) ;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(0.3);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.app__example {
     background: #f8f5ec;
 }
 
-.example__title {
+.app__example-title {
     padding: 3px 7px;
     font-size: 12px;
     font-weight: bold;
@@ -122,6 +165,10 @@ body {
     background-color: #f1ede4;
 }
 
-.example > .editor {
-    padding: 10px;
+.app__example > .example {
+    margin: 10px;
+    float: left;
+}
+.app__example .example__img {
+    max-height: 65vh;
 }

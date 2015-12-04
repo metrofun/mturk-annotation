@@ -2,6 +2,7 @@ var path = require('path');
 var port = 8000;
 var srcPath = path.join(__dirname, '/../src');
 var publicPath = '/assets/';
+
 module.exports = {
   port: port,
   debug: true,
@@ -18,6 +19,7 @@ module.exports = {
     publicPath: publicPath,
     noInfo: false
   },
+  resolveLoader: { root: path.join(__dirname, '../node_modules') },
   resolve: {
     extensions: [
       '',
@@ -53,6 +55,10 @@ module.exports = {
         loader: 'style-loader!css-loader!postcss-loader!sass-loader?outputStyle=expanded'
       },
       {
+          test: /\.json/,
+          loader: 'json'
+      },
+      {
         test: /\.less/,
         loader: 'style-loader!css-loader!postcss-loader!less-loader'
       },
@@ -62,7 +68,7 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|gif|woff|woff2|svg)$/,
-        loader: 'url-loader?limit=8192'
+        loader: 'url-loader?limit=8192&name=[name].[ext]'
       }
     ]
   },
