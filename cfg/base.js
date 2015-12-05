@@ -63,6 +63,10 @@ module.exports = {
         loader: 'style-loader!css-loader!postcss-loader!less-loader'
       },
       {
+          test: /\.txt/,
+          loader: 'raw'
+      },
+      {
         test: /\.styl/,
         loader: 'style-loader!css-loader!postcss-loader!stylus-loader'
       },

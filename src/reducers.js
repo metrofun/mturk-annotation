@@ -29,6 +29,6 @@ function points(state, action) {
 export default function(state = {points: []}, action) {
     return {
         points: points(state, action),
-        imageId: '1208068331_1'
+        imageId: '213034733_1'
     }
 }

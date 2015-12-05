@@ -59,7 +59,7 @@ class App extends React.Component {
             sidebar = <div className="app__sidebar">
                 <h3 className="title">Finished, thank you!</h3>
                 <div className="app__controls">
-                    <a className="button button_style_info" download='download.json' href={url}>Download Results</a>
+                    <a className="button button_style_info" download={imageId + '.json'} href={url}>Download Results</a>
                 </div>
             </div>
         }
