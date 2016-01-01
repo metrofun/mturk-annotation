@@ -47,7 +47,7 @@ class App extends React.Component {
                     <button className="button button_style_info"
                         onClick={() => this.dispatch((undoPoint()))}>undo (ctrl+z)</button>
                     <button className="button button_style_danger"
-                        onClick={() => this.dispatch(addHiddenPoint())}>point is not visible</button>
+                        onClick={() => this.dispatch(addHiddenPoint())}>point is not visible(right click)</button>
                 </div>
                 <div className="app__example">
                     <div className="app__example-title">Example</div>
@@ -69,6 +69,11 @@ class App extends React.Component {
                 <Editor
                     points={points}
                     onAddClick={(x, y) => this.dispatch(addPoint(x, y))}
+                    onContextMenu={(e) => {
+                        this.dispatch(addHiddenPoint());
+                        e.preventDefault();
+                        return false;
+                    }}
                     imageId={imageId}/>
                 {sidebar}
             </div>
