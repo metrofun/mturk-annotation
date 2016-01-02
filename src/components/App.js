@@ -13,7 +13,8 @@ class App extends React.Component {
     onKeyDown(e) {
         var evtobj = window.event? event : e
         if (evtobj.keyCode == 90 && evtobj.ctrlKey) {
-            this.dispatch((undoPoint()))
+            //calling original, not bounded from top
+            this.props.dispatch((undoPoint()))
         }
     }
     dispatch() {

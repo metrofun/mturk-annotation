@@ -91,6 +91,7 @@ body {
 }
 
 .editor {
+    user-select: none;
     cursor: crosshair;
     position: relative;
 }

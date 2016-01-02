@@ -5,11 +5,11 @@ let steps = [
   },
   // Face Contour
   {
-    label: 'lower contact point between left ear and face',
-    id: 28
-  }, {
     label: 'upper contact point between left ear and face',
     id: 29
+  }, {
+    label: 'lower contact point between left ear and face',
+    id: 28
   }, {
     label: 'corner of left jaw bone',
     id: 30
