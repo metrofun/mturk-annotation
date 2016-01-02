@@ -7,7 +7,7 @@ import Example from './Example'
 import steps from '../data/steps'
 import React from 'react';
 import { connect } from 'react-redux'
-import { addPoint, undoPoint, addHiddenPoint } from '../actions'
+import { nextImage, addPoint, undoPoint, addHiddenPoint } from '../actions'
 
 class App extends React.Component {
     onKeyDown(e) {
@@ -59,7 +59,12 @@ class App extends React.Component {
             sidebar = <div className="app__sidebar">
                 <h3 className="title">Finished, thank you!</h3>
                 <div className="app__controls">
-                    <a className="button button_style_info" download={imageId + '.json'} href={url}>Download Results</a>
+                    <a className="button button_style_info" download={imageId + '.json'}
+                        onClick={() => {
+                            // calling original dispatch
+                            this.props.dispatch(nextImage())
+                        }}
+                    href={url}>Download Results</a>
                 </div>
             </div>
         }
@@ -87,7 +92,7 @@ class App extends React.Component {
 function select(state) {
     return {
         points: state.points,
-        imageId: state.imageId
+        imageId: state.image.id
     }
 }
 

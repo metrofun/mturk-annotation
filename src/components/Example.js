@@ -26,7 +26,7 @@ export default class example extends Component {
 
       return (
         <div className="example">
-          <img className="example__img" src={require('../images/helen_1/' + imageId + '.jpg')} alt="Click to add point"/>
+          <img className="example__img" src={'../images/helen/' + imageId + '.jpg'} alt="Click to add point"/>
           <div className="example__point" style={{left, top}}></div>
         </div>
       )

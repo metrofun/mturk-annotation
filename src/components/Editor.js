@@ -12,7 +12,7 @@ export default class Editor extends Component {
     return (
         <div ref="editor" className="editor" onClick={this.onAddClick.bind(this)}
             onContextMenu={this.props.onContextMenu}>
-        <img className="editor__img" src={require('../images/helen_1/' + this.props.imageId + '.jpg')} alt="Click to add point"/>
+        <img className="editor__img" src={'../images/helen/' + this.props.imageId + '.jpg'} alt="Click to add point"/>
         {this.props.points.map(function(point) {
           if (point.visible) {
             let left = point.x * 100 + '%';

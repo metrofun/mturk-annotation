@@ -72,7 +72,7 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|gif|woff|woff2|svg)$/,
-        loader: 'url-loader?limit=8192&name=[name].[ext]'
+        loader: 'file-loader?name=[path][name].[ext]'
       }
     ]
   },
